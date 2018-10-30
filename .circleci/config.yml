@@ -2,7 +2,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:4.8.2
+      - image: circleci/golang:1.9
+    working_directory: /go/src/github/{{ORG_NAME}}/{{REPO_NAME}}
     steps:
       - checkout
       - run: echo "hello world"
